@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="80dp" android:orientation="vertical"
+    xmlns:android="" android:id="@+id/linearLayout2" android:layout_below="@+id/ivAttachment"
+    android:layout_centerHorizontal="true" android:background="@drawable/listview_round"
+    android:padding="5dp" android:gravity="center_horizontal|fill" android:layout_marginLeft="8dp"
+    android:layout_marginTop="1dp" android:layout_marginRight="8dp" android:layout_marginBottom="1dp">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:background="@drawable/iner_listviewstyle">
+            <ImageView
+                android:id="@+id/image_file"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filename"
+                    android:id="@+id/filename_id"
+                    android:layout_gravity="center_horizontal" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/files_created"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="6dip"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="created" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/b_upload"
+                android:src="@mipmap/ic_dowload"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="80dp" />
+        </LinearLayout>
+        <ProgressBar
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:id="@+id/prgressbar_good"
+            android:layout_height="8dp"
+            android:layout_marginTop="24dp"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+
+    </LinearLayout>

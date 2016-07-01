@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customdialog"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="300dp"
+    android:background="@color/bg_bubble_self">
+    <TextView
+        android:id="@+id/txt_download_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download info"
+        android:layout_gravity="center"
+        />
+    <ProgressBar
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/progressbar"
+        android:layout_height="8dp"
+        android:layout_marginTop="24dp"
+        android:indeterminate="true"
+        android:visibility="visible" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:text="Open"
+        android:id="@+id/button_open"
+        android:background="#73c5d3"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>

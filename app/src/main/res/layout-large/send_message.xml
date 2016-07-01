@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.AppBarLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+        <TextView
+            android:id="@+id/message_sender"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="@string/message_sender"
+            android:textSize="32sp"
+            android:layout_weight="0.15"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/wallet_holo_blue_light"
+            android:layout_height="2dp"></View>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:id="@+id/chat_room_spinner"
+            android:layout_weight="0" />
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/wallet_holo_blue_light"
+            android:layout_height="2dp"></View>
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:gravity="top"
+            android:hint="@string/message" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/file"
+            android:orientation="horizontal"
+            android:background="#ffffff"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/file_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@mipmap/attach_icon"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="8dp"
+                android:contentDescription="@string/file_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/file_name"
+                android:textSize="12sp"
+                android:maxLength="15"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/file_icon"
+                android:layout_toRightOf="@+id/file_icon"
+                android:layout_toEndOf="@+id/file_icon" />
+            <TextView
+                android:id="@+id/file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/file_size"
+                android:textSize="12sp"
+                android:textColor="#595858"
+                android:textStyle="bold"
+                android:layout_alignBottom="@+id/file_icon"
+                android:layout_toRightOf="@+id/file_icon"
+                android:layout_toEndOf="@+id/file_icon" />
+            <Button
+                android:id="@+id/attach_button"
+                android:text="attach"
+                android:textColor="@android:color/white"
+                android:background="@drawable/dialog_ok_button"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/file_size" />
+        </RelativeLayout>
+        <ProgressBar
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:id="@+id/prgressbar_good"
+            android:layout_height="8dp"
+            android:indeterminate="true"
+            android:layout_below="@+id/attach_button"
+            android:visibility="gone" />
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/wallet_holo_blue_light"
+            android:layout_height="2dp"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:weightSum="2"
+            android:layout_below="@+id/file"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_cancel_message"
+                android:textColor="@android:color/white"
+                android:background="@drawable/dialog_ok_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"/>
+            <Button
+
+                android:id="@+id/btn_send_message"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:background="@drawable/dialog_ok_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

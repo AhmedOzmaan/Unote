@@ -1,0 +1,21 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="#87CEEB">
+    </solid>
+    <stroke
+        android:width="0dp"
+        android:color="#dedede">
+    </stroke>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Color when the row is selected -->
+        <item android:drawable="@android:color/darker_gray" android:state_pressed="false" android:state_selected="true" />
+        <!-- Standard background color -->
+        <item android:drawable="@android:color/white" android:state_selected="false" />
+    </selector>
+    <corners
+        android:topLeftRadius="20dip"
+        android:topRightRadius="20dip"
+        android:bottomLeftRadius="20dip"
+        android:bottomRightRadius="20dip">
+    </corners>
+</shape>
